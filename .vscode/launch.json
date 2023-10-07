@@ -14,7 +14,7 @@
             "type": "php",
             "request": "launch",
             "program": "${workspaceRoot}/Code/vendor/bin/phpunit",
-            "cwd": "${workspaceFolder}/Code",
+            "cwd": "${workspaceFolder}/src",
             "port": 9003,
             "runtimeArgs": [
                 "-dxdebug.start_with_request=yes"
@@ -30,7 +30,7 @@
             "request": "launch",
             "port": 9003,
             "pathMappings": {
-                "/var/www/php/php7/DHP-TP6": "${workspaceRoot}/Code"
+                "/var/www/php": "${workspaceRoot}/src"
             }
         }
     ]
