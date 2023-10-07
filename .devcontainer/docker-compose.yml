@@ -1,0 +1,20 @@
+version: '3'
+services:
+  php-dev:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - ..:/home/developer/workspace
+      - ../src:/var/www/php
+      - ../etc/apache2/sites-available/config/php:/etc/apache2/sites-available/config/php
+      - ../etc/apache2/sites-available/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      - ../etc/apache2/ports-docker.conf:/etc/apache2/ports.conf
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+        limits:
+          # limit cpu usage to prevent system hangs
+          cpus: '0.70'

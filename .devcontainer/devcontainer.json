@@ -1,0 +1,26 @@
+{
+	"name": "php-dev",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "php-dev",
+	"runServices": [
+		"php-dev"
+	],
+	"workspaceFolder": "/home/developer/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.copilot",
+				"github.copilot-labs",
+				"github.copilot-chat",
+				"ms-azuretools.vscode-docker",
+				"gruntfuggly.todo-tree",
+				"ms-azuretools.vscode-docker",
+				"xdebug.php-debug",
+				"bmewburn.vscode-intelephense-client",
+				"neilbrayfield.php-docblocker",
+				"formulahendry.code-runner",
+				"aaron-bond.better-comments"
+			]
+		}
+	}
+}
